@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestScriptUsingTestNG.TestScripts_01_Test">
+      <class name="TestScriptUsingTestNG.TestScript_02_Test">
         <methods>
+          <include name="createLead"/>
           <include name="configDB"/>
           <include name="configAC"/>
           <include name="disconnectDB"/>
-          <include name="createOrga"/>
           <include name="configBC"/>
           <include name="configAM"/>
           <include name="configBM"/>
         </methods>
-      </class> <!-- TestScriptUsingTestNG.TestScripts_01_Test -->
+      </class> <!-- TestScriptUsingTestNG.TestScript_02_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

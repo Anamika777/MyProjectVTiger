@@ -43,16 +43,12 @@ public class ListenerImplementationClass implements ITestListener {
 				report.setSystemInfo("Base-URL", "http://localhost:8888");
 				report.setSystemInfo("Reporter Name ", "anamikap");
 		
-		
-		
-		
 	}
 
 	public void onTestFailure(ITestResult result) {
 
 		
 		String Failedscript=result.getMethod().getMethodName();
-		
 		JavaUtility jLib=new JavaUtility();
 		String fs="FailedSript" +jLib.getSystemDateAndTimeInFormat();
 		EventFiringWebDriver edriver=new EventFiringWebDriver(BaseClass.sdriver);

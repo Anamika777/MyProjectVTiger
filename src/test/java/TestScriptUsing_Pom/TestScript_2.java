@@ -22,7 +22,7 @@ public class TestScript_2 {
 		JavaUtility jLib=new JavaUtility();
 		
 		//read data from properties file//
-		String URL = fLib.readDataFromPropertyFile("url");
+		String URL = fLib.readDataFromPropertyFile("urlLocal");
 		String USERNAME = fLib.readDataFromPropertyFile("username");
 		String PASSWORD = fLib.readDataFromPropertyFile("password");
 		

@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="tests" name="Test2(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestScriptUsingTestNG.TestScript_04_Test">
-        <methods>
-          <include name="configDB"/>
-          <include name="configAC"/>
-          <include name="createProduct"/>
-          <include name="disconnectDB"/>
-          <include name="configBC"/>
-          <include name="configAM"/>
-          <include name="configBM"/>
-        </methods>
-      </class> <!-- TestScriptUsingTestNG.TestScript_04_Test -->
       <class name="TestScriptUsingTestNG.TestScript_02_Test">
         <methods>
           <include name="createLead"/>
@@ -26,31 +15,5 @@
         </methods>
       </class> <!-- TestScriptUsingTestNG.TestScript_02_Test -->
     </classes>
-  </test> <!-- Test2(failed) -->
-  <test thread-count="2" parallel="tests" name="Test1(failed)">
-    <classes>
-      <class name="TestScriptUsingTestNG.TestScript_03_Test">
-        <methods>
-          <include name="configDB"/>
-          <include name="createMethod"/>
-          <include name="configAC"/>
-          <include name="disconnectDB"/>
-          <include name="configBC"/>
-          <include name="configAM"/>
-          <include name="configBM"/>
-        </methods>
-      </class> <!-- TestScriptUsingTestNG.TestScript_03_Test -->
-      <class name="TestScriptUsingTestNG.TestScripts_01_Test">
-        <methods>
-          <include name="configDB"/>
-          <include name="configAC"/>
-          <include name="disconnectDB"/>
-          <include name="createOrga"/>
-          <include name="configBC"/>
-          <include name="configAM"/>
-          <include name="configBM"/>
-        </methods>
-      </class> <!-- TestScriptUsingTestNG.TestScripts_01_Test -->
-    </classes>
-  </test> <!-- Test1(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

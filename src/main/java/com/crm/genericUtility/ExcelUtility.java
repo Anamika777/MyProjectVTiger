@@ -18,15 +18,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ExcelUtility extends JavaUtility {
 	
 	
-	/**
-	 * This method is used to read data from excel sheet
-	 * @param Sheetname
-	 * @param rownum
-	 * @param cellnum
-	 * @return
-	 * @throws Throwable 
-	 * @throws IOException
-	 */
+
 	
 	public String readDataFromExcelSheet(String Sheetname,int rownum, int cellnum) throws Throwable
 	{
@@ -38,15 +30,7 @@ public class ExcelUtility extends JavaUtility {
 		String value = cel.getStringCellValue();
 		return value;
 	}
-	/**
-	 * This method is used to write data into excel sheet//
-	 * @author admin
-	 * @param Sheetname
-	 * @param rownum
-	 * @param cellnum
-	 * @param data
-	 * @throws Throwable
-	 */
+	
 	public void writeDataIntoExcelSheet(String Sheetname,int rownum, int cellnum,String data) throws Throwable
 	{
 		FileInputStream fis = new FileInputStream(IPathConstant.Excelspath);
@@ -66,7 +50,7 @@ public class ExcelUtility extends JavaUtility {
 		int count = sh.getLastRowNum();
 		return count;
     }
-	public HashMap<String,String> getList(String Sheetname,int keyCell,int valuecell) throws Throwable
+	public HashMap<String,String> getList(String Sheetname,int keyCell,int valueCell) throws Throwable
 	{
 		JavaUtility jLib=new JavaUtility();
 		int random = jLib.getRandom();
@@ -79,7 +63,7 @@ public class ExcelUtility extends JavaUtility {
 		for(int i=0;i<=count;i++)
 		{
 			String key = sh.getRow(i).getCell(keyCell).getStringCellValue();
-			String value = sh.getRow(i).getCell(valuecell).getStringCellValue()+random;
+			String value = sh.getRow(i).getCell(valueCell).getStringCellValue()+random;
 			map.put(key, value);
 		}
 		return map;
@@ -143,6 +127,4 @@ public class ExcelUtility extends JavaUtility {
       	
       	}
 	
-	
-
 }

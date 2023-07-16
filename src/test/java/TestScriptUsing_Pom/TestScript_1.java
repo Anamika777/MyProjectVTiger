@@ -12,9 +12,13 @@ import com.crm.genericUtility.FileUtility;
 import com.crm.genericUtility.JavaUtility;
 import com.crm.genericUtility.WebDriverUtility;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestScript_1 {
 
 	public static void main(String[] args) throws Throwable {
+		
+		
 		
 		WebDriverUtility wLib=new WebDriverUtility();
 		ExcelUtility eLib=new ExcelUtility();
@@ -32,7 +36,8 @@ public class TestScript_1 {
 		String typeValue = eLib.readDataFromExcelSheet("Organization1", 2, 1);
 		
 		//launch the browser//
-		WebDriver driver=new ChromeDriver();
+      WebDriver driver=new ChromeDriver();
+     
 		wLib.maxiMizewindow(driver);
 		wLib.waitForPageLoad(driver);
 		driver.get(URL);

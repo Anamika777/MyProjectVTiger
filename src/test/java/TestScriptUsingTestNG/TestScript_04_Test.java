@@ -85,12 +85,7 @@ public class TestScript_04_Test extends BaseClass {
 		hp.clickOnHome();
 //		hp.clickOnSignOut(wLib, driver);
 //		wLib.close(driver);
-//		
-//	
+
 
 	}
-
 }
-
-
-

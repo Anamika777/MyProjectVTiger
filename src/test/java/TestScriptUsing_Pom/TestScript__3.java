@@ -19,13 +19,15 @@ public class TestScript__3 {
 	public static void main(String[] args) throws Throwable {
 		
 		
+		
+		
 		WebDriverUtility wLib=new WebDriverUtility();
 		ExcelUtility eLib=new ExcelUtility();
 		FileUtility fLib=new FileUtility();
 		JavaUtility jLib=new JavaUtility();
 		
 		//read data from properties file//
-		String URL = fLib.readDataFromPropertyFile("url");
+		String URL = fLib.readDataFromPropertyFile("urlLocal");
 		String USERNAME = fLib.readDataFromPropertyFile("username");
 		String PASSWORD = fLib.readDataFromPropertyFile("password");
 		

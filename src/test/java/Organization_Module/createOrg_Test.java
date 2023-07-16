@@ -25,7 +25,7 @@ public class createOrg_Test {
 		int random = ran.nextInt(1000);
 		
 		//Steps 1: get common data
-		FileInputStream fis=new FileInputStream("./src/test/resources/CommonData.properties");
+		FileInputStream fis=new FileInputStream("./src/test/resources/CommonData4.properties");
 		Properties pobj=new Properties();
 		pobj.load(fis);
 		String URL = pobj.getProperty("url");
@@ -33,7 +33,7 @@ public class createOrg_Test {
 		String PASSWORD = pobj.getProperty("password");
 		
 		//Steps 2: Read data from excel sheet
-		FileInputStream fi=new FileInputStream("./src/test/resources/TestData.xlsx");
+		FileInputStream fi=new FileInputStream("./src/test/resources/TestData4.xlsx");
 		Workbook book = WorkbookFactory.create(fi);
 		Sheet sh = book.getSheet("Organization");
 		String OrgName = sh.getRow(0).getCell(1).getStringCellValue()+random;

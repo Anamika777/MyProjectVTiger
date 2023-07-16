@@ -2,7 +2,6 @@ package TestScriptUsing_Pom;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 
 import com.crm.ObjectRepository.CreateFaq;
 import com.crm.ObjectRepository.CreateNewProduct;
@@ -27,7 +26,7 @@ public class TestScript_4 {
 		JavaUtility jLib=new JavaUtility();
 		
 		//read data from properties file//
-		String URL = fLib.readDataFromPropertyFile("urlLocal");
+		String URL = fLib.readDataFromPropertyFile("url");
 		String USERNAME = fLib.readDataFromPropertyFile("username");
 		String PASSWORD = fLib.readDataFromPropertyFile("password");
 		
@@ -75,10 +74,9 @@ public class TestScript_4 {
 		cf.fillFaqFields(faqQuestion, faqAnswer, wLib, faqStatus, driver, pname);
 		
 		hp.clickOnHome();
-//		hp.clickOnSignOut(wLib, driver);
-//		wLib.close(driver);
-//		
-//	
+		hp.clickOnSignOut(wLib, driver);
+		wLib.close(driver);
+	
 
 
 	}

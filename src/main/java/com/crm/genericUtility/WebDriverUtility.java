@@ -48,45 +48,25 @@ public class WebDriverUtility {
 	//	WebDriverWait wait=new WebDriverWait(driver,Duration.ofMillis(10000));
 		//wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	/**
-	 * This method will select data from dropdown by using value
-	 * @author admin
-	 * @param element
-	 * @param value
-	 */
+	
 	public void select(WebElement element,String value)
 	{
 		Select s=new Select(element);
 		s.selectByValue(value);
 	}
-	/**
-	 * This method will select data from dropdown by using visible text
-	 * @author admin
-	 * @param visibletext
-	 * @param element
-	 */
+	
 	public void select(String visibletext, WebElement element)
 	{
 		Select s=new Select(element);
 		s.selectByVisibleText(visibletext);
 	}
-	/**
-	 *  This method will select data from dropdown by using index
-	 * @author admin
-	 * @param element
-	 * @param index
-	 */
+	
 	public void select(WebElement element, int index)
 	{
 		Select s=new Select(element);
 		s.selectByIndex(index);
 	}
-	/**
-	 * This method is used to move the mouse cursor to a aprticular webelement
-	 * @author admin
-	 * @param driver
-	 * @param element
-	 */
+	
 	public void mousehover(WebDriver driver,WebElement element)
 	{
 		Actions act=new Actions(driver);
@@ -181,12 +161,7 @@ public class WebDriverUtility {
 		}
 		
 	}
-	/**
-	 * This method is used to switch to next window
-	 * @author admin
-	 * @param partialTitle
-	 * @param driver
-	 */
+	
 	public void getwindowHandles( String partialTitle,WebDriver driver)
 	{
 		//String mainid = driver.getWindowHandle();
@@ -201,23 +176,13 @@ public class WebDriverUtility {
 			}
 		}
 	}
-	/**
-	 * This method is used to come to main window
-	 * @author admin
-	 * @param driver
-	 */
+	
 	public void comeToMAinWindow(WebDriver driver,String mainid)
 	{
 		
 		driver.switchTo().window(mainid);
 	}
-	/**
-	 * This method is used to scroll down the screen
-	 * @author admin
-	 * @param driver
-	 * @param x
-	 * @param y
-	 */
+	
 	public void scrollBarAction(WebDriver driver)
 	{
 		JavascriptExecutor jse=(JavascriptExecutor)driver;

@@ -44,9 +44,9 @@ public class BaseClass {
 	{
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.get("http://rmgtestingserver:8888/");
+		driver.get("http://localhost:8888/");
 		String BROWSER = fLib.readDataFromPropertyFile("browser");
-		String URL = fLib.readDataFromPropertyFile("url");
+		String URL = fLib.readDataFromPropertyFile("urlLocal");
 		
 		if(BROWSER.equalsIgnoreCase("ie"))
 		{
